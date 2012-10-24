@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tool.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @tool.description %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @tool.link %>
+</p>
+
+
+<%= link_to 'Edit', edit_tool_path(@tool) %> |
+<%= link_to 'Back', tools_path %>
