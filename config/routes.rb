@@ -1,4 +1,8 @@
 BestqaOrg::Application.routes.draw do
+  get "mission/index"
+
+  get "home/index"
+
   get "resource/index"
 
   resources :tools
