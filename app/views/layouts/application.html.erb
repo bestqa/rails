@@ -9,43 +9,50 @@
 <body class="body_width">
   <div id="banner">
     <div id="logo">
-      <a href="index.html">
-	    <%= image_tag("logo.jpg") %>
-      </a>
+	  <%= image_tag("logo.jpg") %>
     </div>
-    <div id="log_tail">
-       <a>.org</a>
-    </div>
+    <div id="log_tail">.org</div>
     <div id="navigator">
       <div id="sign_in_up"> 
-        <a href="http://www.bestqa.org/forum/wp-register.php" target="_blank">Sign Up</a> &nbsp;
-        <a href="http://www.bestqa.org/forum/wp-login.php" target="_blank">Sign In</a> &nbsp;&nbsp;
+        <%= link_to "Sign Up", "http://www.bestqa.org/forum/wp-register.php", html_options = { :target => '_blank' } %> &nbsp;
+        <%= link_to "Sign In", "http://www.bestqa.org/forum/wp-login.php",    html_options = { :target => '_blank' } %> &nbsp;&nbsp;
       </div>
-      <div style="font-size:20px;text-transform:uppercase">
-        <a href="index.html" style="text-decoration:none;background:#F7F7F7;border-radius:5px 5px 5px;">Home</a> &nbsp;&nbsp;
-        <a href="index.html" style="text-decoration:none;background:#F7F7F7;border-radius:5px 5px 5px;">Mission</a> &nbsp;&nbsp;
-        <a href="index.html" style="text-decoration:none;background:#F7F7F7;border-radius:5px 5px 5px;">Articles</a> &nbsp;&nbsp;
-        <a href="index.html" style="text-decoration:none;background:#F7F7F7;border-radius:5px 5px 5px;">Seminars</a> &nbsp;&nbsp;
-        <a href="index.html" style="text-decoration:none;background:#F7F7F7;border-radius:5px 5px 5px;">Resources</a> &nbsp;&nbsp;
-        <a href="http://www.bestqa.org/forum" style="text-decoration:none;color:white;background:#000000;border-radius:5px 5px 5px;" target='_blank' title="Goto WordPress Site">Forum</a> &nbsp; 
+      <div id="menu_bar">
+        <%= link_to      "Home", "http://bestqa.org", :class => "menu_bar" %> &nbsp;&nbsp;
+        <%= link_to   "Mission", "http://bestqa.org", :class => "menu_bar" %> &nbsp;&nbsp;
+        <%= link_to  "Articles", "http://bestqa.org", :class => "menu_bar" %> &nbsp;&nbsp;
+        <%= link_to  "Seminars", "http://bestqa.org", :class => "menu_bar" %> &nbsp;&nbsp;
+        <%= link_to "Resources", resource_index_path, :class => "menu_bar" %> &nbsp;&nbsp;
+        <%= link_to     "Forum", "http://www.bestqa.org/forum", html_options = { :class  => "menu_bar", 
+                                                                                 :style  => "color:white; background: black",
+                                                                                 :target => '_blank', 
+                                                                                 :title  => 'Goto WordPress Site' 
+                                                                               } %> &nbsp;
       </div>
     </div>
   </div>
-  <div>
+  <div id="main">
     <%= yield %>
   </div>
   <div id="footer">
-    <a href="http://twitter.com/bestqaorg" style="text-decoration:none" target='_blank' title="@bestqaorg">
-      <%= image_tag("twitter.png", :border => 0) %>
-    </a> 
-    <a href="http://q.weibo.com/291573" style="text-decoration:none" target='_blank' title="+新浪微群">
-      <%= image_tag("weibo.png") %>
-    </a> 
-    <a href="https://plus.google.com/u/0/114905847024713781131/posts" style="text-decoration:none" target='_blank' title="G+">
-      <%= image_tag("googleplus.png") %>
-    <a href="http://www.linkedin.com/groups/bestqaorg-4177253" style="text-decoration:none" target='_blank' title="Join LinkedIn Group">
-      <%= image_tag("linkedin.png") %>
-    </a> 
+    <%= link_to image_tag("twitter.png"),   "http://twitter.com/bestqaorg", html_option = { :style  => "text-decoration:none; background-color: white;", 
+                                                                                            :target => '_blank', 
+                                                                                            :title  => "@bestqaorg" 
+                                                                                          } %>
+    <%= link_to image_tag("weibo.png"),     "http://q.weibo.com/291573",    html_option = { :style  => "text-decoration:none; background-color: white;", 
+                                                                                            :target => '_blank', 
+                                                                                            :title  => "+新浪微群" 
+                                                                                          } %>
+    <%= link_to image_tag("googleplus.png"),"https://plus.google.com/u/0/114905847024713781131/posts",
+                                                                            html_option = { :style  => "text-decoration:none; background-color: white;", 
+                                                                                            :target => '_blank', 
+                                                                                            :title  => "G+" 
+                                                                                          } %>
+    <%= link_to image_tag("linkedin.png"),  "http://www.linkedin.com/groups/bestqaorg-4177253",
+                                                                            html_option = { :style  => "text-decoration:none; background-color: white;", 
+                                                                                            :target => '_blank', 
+                                                                                            :title  => "Join LinkedIn Group" 
+                                                                                          } %>
   </div>
 </body>
 </html>
