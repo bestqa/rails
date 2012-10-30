@@ -1,4 +1,6 @@
 BestqaOrg::Application.routes.draw do
+  get "resource/index"
+
   resources :tools
 
   # The priority is based upon order of creation:
