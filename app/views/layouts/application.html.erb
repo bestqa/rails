@@ -6,10 +6,10 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body class="body_width">
+<body class="body_width" onselectstart="return false">
   <div id="banner">
     <div id="logo">
-	  <%= image_tag("logo.jpg") %>
+	  <%= image_tag("logo.gif") %>
     </div>
     <div id="log_tail">.org</div>
     <div id="navigator">
@@ -35,23 +35,23 @@
     <%= yield %>
   </div>
   <div id="footer">
-    <%= link_to image_tag("twitter.png"),   "http://twitter.com/bestqaorg", html_option = { :style  => "text-decoration:none; background-color: white;", 
+    <%= link_to image_tag("twitter.png"),   "http://twitter.com/bestqaorg", html_option = { :style  => "text-decoration:none; background-color: #F7F7F7;", 
                                                                                             :target => '_blank', 
                                                                                             :title  => "@bestqaorg" 
                                                                                           } %>
-    <%= link_to image_tag("weibo.png"),     "http://q.weibo.com/291573",    html_option = { :style  => "text-decoration:none; background-color: white;", 
+    <%= link_to image_tag("linkedin.png"),  "http://www.linkedin.com/groups/bestqaorg-4177253",
+                                                                            html_option = { :style  => "text-decoration:none; background-color: #F7F7F7;", 
+                                                                                            :target => '_blank', 
+                                                                                            :title  => "Join LinkedIn Group" 
+                                                                                          } %>
+    <%= link_to image_tag("weibo.png"),     "http://q.weibo.com/291573",    html_option = { :style  => "text-decoration:none; background-color: #F7F7F7;", 
                                                                                             :target => '_blank', 
                                                                                             :title  => "+新浪微群" 
                                                                                           } %>
     <%= link_to image_tag("googleplus.png"),"https://plus.google.com/u/0/114905847024713781131/posts",
-                                                                            html_option = { :style  => "text-decoration:none; background-color: white;", 
+                                                                            html_option = { :style  => "text-decoration:none; background-color: #F7F7F7;", 
                                                                                             :target => '_blank', 
                                                                                             :title  => "G+" 
-                                                                                          } %>
-    <%= link_to image_tag("linkedin.png"),  "http://www.linkedin.com/groups/bestqaorg-4177253",
-                                                                            html_option = { :style  => "text-decoration:none; background-color: white;", 
-                                                                                            :target => '_blank', 
-                                                                                            :title  => "Join LinkedIn Group" 
                                                                                           } %>
   </div>
 </body>
