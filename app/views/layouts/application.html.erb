@@ -20,8 +20,8 @@
       <div id="menu_bar">
         <%= link_to      "Home",     home_index_path, :class => "menu_bar" %> &nbsp;&nbsp;
         <%= link_to   "Mission",  mission_index_path, :class => "menu_bar" %> &nbsp;&nbsp;
-        <%= link_to  "Articles", "http://bestqa.org", :class => "menu_bar" %> &nbsp;&nbsp;
-        <%= link_to  "Seminars", "http://bestqa.org", :class => "menu_bar" %> &nbsp;&nbsp;
+        <%= link_to  "Articles",  mission_index_path, :class => "menu_bar" %> &nbsp;&nbsp;
+        <%= link_to  "Seminars",  mission_index_path, :class => "menu_bar" %> &nbsp;&nbsp;
         <%= link_to "Resources", resource_index_path, :class => "menu_bar" %> &nbsp;&nbsp;
         <%= link_to     "Forum", "http://www.bestqa.org/forum", html_options = { :class  => "menu_bar", 
                                                                                  :style  => "color:white; background: black",
@@ -35,7 +35,9 @@
     <%= yield %>
   </div>
   <div id="side">
-    <%= image_tag("memo.png") %>
+    <%= link_to image_tag("memo.png"), "https://github.com/bestqa/rails",  html_options = { :style  => "background-color: #F7F7F7;",
+                                                                                            :target => '_blank' 
+                                                                                          }%>
   </div>
   <div id="footer">
     <%= link_to image_tag("twitter.png"),   "http://twitter.com/bestqaorg", html_option = { :style  => "background-color: #F7F7F7;",
