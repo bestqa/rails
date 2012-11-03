@@ -14,8 +14,8 @@
     <div id="log_tail">.org</div>
     <div id="navigator">
       <div id="sign_in_up"> 
-        <%= link_to "Sign Up", "http://www.bestqa.org/forum/wp-register.php", html_options = { :target => '_blank' } %> &nbsp;
-        <%= link_to "Sign In", "http://www.bestqa.org/forum/wp-login.php",    html_options = { :target => '_blank' } %> 
+        <%= link_to "Sign Up", "http://forum.bestqa.org/wp-register.php", html_options = { :target => '_blank' } %> &nbsp;
+        <%= link_to "Sign In", "http://forum.bestqa.org/wp-login.php",    html_options = { :target => '_blank' } %> 
       </div>
       <div id="menu_bar">
         <%= link_to      "Home",     home_index_path, :class => "menu_bar" %> &nbsp;&nbsp;
@@ -23,11 +23,11 @@
         <%= link_to  "Articles",  mission_index_path, :class => "menu_bar" %> &nbsp;&nbsp;
         <%= link_to  "Seminars",  mission_index_path, :class => "menu_bar" %> &nbsp;&nbsp;
         <%= link_to "Resources", resource_index_path, :class => "menu_bar" %> &nbsp;&nbsp;
-        <%= link_to     "Forum", "http://www.bestqa.org/forum", html_options = { :class  => "menu_bar", 
-                                                                                 :style  => "color:white; background: black",
-                                                                                 :target => '_blank', 
-                                                                                 :title  => 'Goto WordPress Site' 
-                                                                               } %> 
+        <%= link_to     "Forum",  "http://forum.bestqa.org", html_options = { :class  => "menu_bar", 
+                                                                              :style  => "color:white; background: black",
+                                                                              :target => '_blank', 
+                                                                              :title  => 'Goto WordPress Site' 
+                                                                            } %> 
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@
     <%= yield %>
   </div>
   <div id="side">
-    <%= link_to image_tag("memo.png"), "https://github.com/bestqa/rails",  html_options = { :style  => "background-color: #F7F7F7;",
+    <%= link_to image_tag("memo.png"),  "http://github.com/bestqa/rails",  html_options = { :style  => "background-color: #F7F7F7;",
                                                                                             :target => '_blank' 
                                                                                           }%>
   </div>
