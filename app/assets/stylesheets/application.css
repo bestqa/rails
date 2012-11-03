@@ -13,6 +13,7 @@
  */
 .body_width
 {
+	position        :relative;
 	width           :960px;
 	background-color:#F7F7F7;
 	border-color    :transparent;
@@ -77,6 +78,14 @@
 	text-align      :left;
 	margin-left     :0px;
 	margin-right    :200px;
+}
+#side
+{
+   position         :absolute;
+   top              :88px;
+   text-align       :right;
+   margin-left      :760px;
+   width            :200px;
 }
 #footer
 {
